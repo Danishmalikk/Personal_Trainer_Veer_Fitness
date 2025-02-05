@@ -6,7 +6,10 @@ import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa'
 
 const Footer = () => {
   return (
-    <div className='flex justify-between p-32 mt-auto bg-black text-white'>
+    <div className='bg-black'>
+ 
+        <div className='container m-auto bg-black'>
+       <div className='flex justify-between py-20 px-15 mt-auto bg-black text-white'>
         <Link to={'/'}> 
              <img src={Logo} width={170} height={150} alt='' />
         </Link>
@@ -30,6 +33,11 @@ const Footer = () => {
             <h2> * I would like to receive communications about Veer Fitness products,services and events</h2>
         </div>
     </div>
+    </div>
+
+    </div>
+   
+   
   )
 }
 
