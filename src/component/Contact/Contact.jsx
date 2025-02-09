@@ -4,7 +4,7 @@ const Contact = () => {
   return (
     <div>
         <div> 
-        <div class="container py-16 md:py-20 mx-auto" id="contact">
+        <div class="container p-3 py-16 md:py-20 mx-auto" id="contact">
   <h2
     class="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl"
   >

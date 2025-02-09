@@ -48,9 +48,13 @@
   color: #fff;
   -webkit-text-stroke: 1px #f6f7f8;
   -webkit-text-fill-color: transparent;
+  @media (max-width: 768px) {
+    font-size: 40px;
+  }
 }
 .offer-container .sub-info h5 > a {
   font-size: 30px;
+
   font-weight: 500;
   margin-bottom: 14px;
   display: block;

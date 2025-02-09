@@ -68,15 +68,16 @@ function Services() {
 
   return (
     <div>
-      <div className="container py-16 md:py-20 mx-auto" id="services">
-        <h2 className="text-center font-header text-4xl font-semibold uppercase text-white sm:text-5xl lg:text-6xl">
+      <div className="container py-3  md:py-20 mx-auto" id="services">
+        <h2 className="text-center font-header md:text-4xl text-2xl font-semibold uppercase text-white sm:text-5xl lg:text-6xl">
           Here's what I'm good at
         </h2>
-        <h3 className="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl">
+        <h3 className="md:pt-6 text-center font-header text-xl font-medium text-white md:text-black sm:text-2xl lg:text-3xl">
           These are the services I offer
         </h3>
 
-        <div className="grid grid-cols-1 gap-6 pt-10 sm:grid-cols-2 md:gap-10 md:pt-12 lg:grid-cols-3">
+
+        <div className="grid grid-cols-1 gap-6 pt-3 sm:grid-cols-2 md:gap-10 md:pt-12 lg:grid-cols-3 p-3 md:p-0">
           {services.map((service, index) => (
             <div 
               key={index} 

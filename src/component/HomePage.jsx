@@ -12,15 +12,17 @@ const HomePage = () => {
   }, []);
 
   return (
-    <div className='flex justify-evenly gap-2'>
-      <div className='mt-40'>
-        <h1 ref={el => textRefs.current[0] = el} className='text-6xl text-white'> Take Your Fitness </h1>
-        <h1 ref={el => textRefs.current[1] = el} className='text-6xl mt-4 text-white'> To The Next Level</h1>
-        <h3 ref={el => textRefs.current[2] = el} className='text-lg mt-10 ml-2 text-white'> PREMIUM ONLINE PERSONAL TRAINING IN CHANDIGARH</h3>
-        <h3 ref={el => textRefs.current[3] = el} className='text-lg ml-2 text-white'> WITH VEER FITNESS </h3>
-        <button ref={el => textRefs.current[4] = el} className='ml-2 mt-8 font-semibold px-4 p-2 rounded-full text-white border-2 border-primary hover:bg-secondary hover:text-white'> START HERE </button>
+    <div className='flex justify-evenly gap-2 md:flex-row flex-col-reverse sm:items-center  p-2 md:p-6'>
+      <div className='md:mt-40 sm:mt-2 mb-4'>
+
+        <h1 ref={el => textRefs.current[0] = el} className='text-2xl md:text-6xl text-white'> Take Your Fitness </h1>
+        <h1 ref={el => textRefs.current[1] = el} className='text-2xl md:text-6xl  md:mt-4 text-white'> To The Next Level</h1>
+
+        <h3 ref={el => textRefs.current[2] = el} className='text-lg md:mt-10 mt-4 md:ml-2 text-white'> PREMIUM ONLINE PERSONAL TRAINING IN CHANDIGARH</h3>
+        <h3 ref={el => textRefs.current[3] = el} className='text-lg md:ml-2 text-white'> WITH VEER FITNESS </h3>
+        <button ref={el => textRefs.current[4] = el} className='md:ml-2 mt-8 font-semibold px-4 p-2 rounded-full text-white border-2 border-primary hover:bg-secondary hover:text-white'> START HERE </button>
       </div>
-      <div className='mt-10'>
+      <div className='md:mt-0 mt-4'>
         <img ref={imageRef} width={550} height={550} src={profileImage} alt=''/>
       </div>
     </div>

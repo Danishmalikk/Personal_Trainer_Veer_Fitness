@@ -49,11 +49,11 @@ const Traning = () => {
 
   return (
     <div>
-      <section className="py-16 bg-gray-100 offer-container bg-black">
+      <section className="md:py-16 py-4 bg-gray-100 offer-container bg-black">
         <div className="container mx-auto px-4">
           {/* Section Title */}
-          <div className="text-center mb-20">
-            <h2 ref={headingRef} className="text-3xl font-bold text-gray-900 ">What I Offer</h2>
+          <div className="text-center md:mb-20 mb-4">
+            <h2 ref={headingRef} className="md:text-3xl text-lg font-bold text-gray-900 ">What I Offer</h2>
           </div>
 
           {/* Service Cards */}
