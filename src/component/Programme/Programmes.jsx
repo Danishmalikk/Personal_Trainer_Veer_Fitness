@@ -7,7 +7,7 @@ const programs = [
     description: "Please do not re-distribute this template ZIP file on any template collection website. This is not allowed.",
     alt: "First One",
     isIcon: true,
-    icon: <FaDumbbell className="w-[70px] h-[30px]  text-xxl text-white transform rotate-45" />,
+    icon: <FaDumbbell className="w-[50px] h-[25px] md:w-[70px] md:h-[30px] text-xxl text-white transform rotate-45" />,
   },
   {
     title: "New Gym Training",
@@ -50,26 +50,58 @@ const programs = [
 
 const Programmes = () => {
   return (
-    <div>
-      <div className="container mx-auto px-4 py-12">
-        <div className="text-center max-w-2xl mx-auto mb-12">
-          <h2 className="text-3xl font-bold text-gray-800">Choose <em className="text-blue-600">Program</em></h2>
-          <img src="assets/images/line-dec.png" alt="waves" className="mx-auto mt-4" />
-          <p className="text-gray-600 mt-4">Training Studio is free CSS template for gyms and fitness centers. You are allowed to use this layout for your business website.</p>
+    <div className="bg-gray-50">
+      <div className="container mx-auto px-4 sm:px-6 py-8 md:py-12">
+        {/* Header Section */}
+        <div className="text-center max-w-2xl mx-auto mb-8 md:mb-12">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-800">
+            Choose Program
+          </h2>
+          <p className="text-gray-600 mt-3 md:mt-4 text-sm md:text-base px-4">
+          Transform your body and mind with our specialized fitness programs. 
+            Whether you're just starting out or looking to push your limits, 
+            our expert trainers will guide you every step of the way.
+          </p>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-8">
+        {/* Programs Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
           {programs.map((program, index) => (
-            <div key={index} className="flex items-center space-x-4 p-6 borderbg-white p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-105">
+            <div 
+              key={index} 
+              className="flex flex-col sm:flex-row items-start sm:items-center gap-4 p-4 md:p-6 
+                bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 
+                transform hover:scale-[1.02]"
+            >
+              {/* Icon/Image Container */}
               {program.isIcon ? (
-                <div className="w-20 h-20 bg-primary flex justify-center items-center p-5">{program.icon}</div>
+                <div className="w-16 h-16 md:w-20 md:h-20 bg-primary flex justify-center 
+                  items-center p-4 rounded-lg shrink-0">
+                  {program.icon}
+                </div>
               ) : (
-                <img src={program.icon} alt={program.alt} className="w-16 h-16" />
+                <img 
+                  src={program.icon} 
+                  alt={program.alt} 
+                  className="w-16 h-16 md:w-20 md:h-20 object-cover rounded-lg" 
+                />
               )}
-              <div>
-                <h4 className="text-xl font-semibold">{program.title}</h4>
-                <p className="text-gray-600">{program.description}</p>
-                <a href="#" className="text-blue-600 font-medium">Discover More</a>
+
+              {/* Content Container */}
+              <div className="flex-1">
+                <h4 className="text-lg md:text-xl font-semibold mb-2">
+                  {program.title}
+                </h4>
+                <p className="text-gray-600 text-sm md:text-base mb-3">
+                  {program.description}
+                </p>
+                <a 
+                  href="#" 
+                  className="inline-block text-blue-600 font-medium text-sm md:text-base 
+                    hover:text-blue-700 transition-colors"
+                >
+                  Discover More
+                </a>
               </div>
             </div>
           ))}

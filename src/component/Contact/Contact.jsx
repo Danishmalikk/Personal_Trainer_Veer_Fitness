@@ -5,22 +5,20 @@ const Contact = () => {
     <div>
         <div> 
         <div class="container p-3 py-16 md:py-20 mx-auto" id="contact">
-  <h2
-    class="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl"
-  >
-    Here's a contact form
-  </h2>
-  <h4
-    class="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl"
-  >
-    Have Any Questions?
-  </h4>
-  <div class="mx-auto w-full pt-5 text-center sm:w-2/3 lg:pt-6">
-    <p class="font-body text-grey-10">
-      Lorem ipsum dolor sit amet consectetur adipiscing elit hendrerit
-      condimentum turpis nisl sem, viverra habitasse urna ante lobortis
-      fermentum accumsan. Viverra habitasse urna ante lobortis fermentum
-      accumsan.
+  <div className="text-center max-w-2xl mx-auto mb-8">
+    <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+      Get in Touch
+    </h2>
+    <p className="text-gray-600 mb-6">
+      Ready to start your fitness journey? Contact us today for personalized 
+      training programs and expert guidance. Whether you're looking to transform 
+      your physique or improve your overall health, we're here to help you 
+      achieve your goals.
+    </p>
+    <p className="text-gray-600">
+      Join the Veer Fitness community and experience the difference of 
+      professional training with proven results. Schedule your consultation 
+      now and take the first step towards a stronger, healthier you.
     </p>
   </div>
   <form class="mx-auto w-full pt-10 sm:w-3/4">
