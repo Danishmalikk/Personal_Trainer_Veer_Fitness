@@ -5,15 +5,13 @@ import user from '../../assets/images/user.jpg';
 import video1 from '../../assets/video/IMG_0174.MP4';
 import video2 from '../../assets/video/IMG_0996.MP4';
 import video3 from '../../assets/video/IMG_1337.MP4';
-import video4 from '../../assets/video/IMG_1421.MP4';
 import video5 from '../../assets/video/IMG_1515.MP4';
 import video6 from '../../assets/video/IMG_1894.MOV';
 import video8 from '../../assets/video/IMG_2031.MP4';
 import video9 from '../../assets/video/IMG_2772.MP4';
 import video10 from '../../assets/video/IMG_2817.MP4';
-import video11 from '../../assets/video/IMG_8073.MP4';
 import video12 from '../../assets/video/IMG_8192.MOV';
-
+import video13 from '../../assets/video/sagun.mp4';
 const testimonials = [
   {
     image: user,
@@ -56,89 +54,64 @@ const testimonials = [
 const videoTestimonials = [
   {
     videoUrl: video1,
-    thumbnail: user,
-    name: "Ishita",
+    name: "annu",
     title: "Lost 25kg in 6 months",
     description: "From struggling with weight to achieving my dream physique"
   },
   {
     videoUrl: video2,
-    thumbnail: user,
-    name: "Manpreet",
+    name: "ajay singh",
     title: "Complete Body Transformation",
     description: "My journey from skinny to strong and confident"
   },
   {
     videoUrl: video3,
-    thumbnail: user,
     name: "Anjali",
     title: "Muscle Building Journey",
     description: "Gained 15kg of lean muscle mass in 8 months"
   },
   {
-    videoUrl: video4,
-    thumbnail: user,
-    name: "Neha Singh",
-    title: "Strength Training Success",
-    description: "From beginner to advanced powerlifting"
-  },
-  {
-    videoUrl: video4,
-    thumbnail: user,
-    name: "Neha Singh",
-    title: "Strength Training Success",
-    description: "From beginner to advanced powerlifting"
-  },
-  {
     videoUrl: video5,
-    thumbnail: user,
     name: "Saloni",
     title: "Strength Training Success",
     description: "From beginner to advanced powerlifting"
-    },
-    {
+  },
+  {
     videoUrl: video6,
-    thumbnail: user,
     name: "Riya",
     title: "Strength Training Success",
     description: "From beginner to advanced powerlifting"
   },
   {
     videoUrl: video8,
-    thumbnail: user,
     name: "Priya Singh",
     title: "Strength Training Success",
     description: "From beginner to advanced powerlifting"
   },
   {
     videoUrl: video9,
-    thumbnail: user,
     name: "Ridima",
     title: "Strength Training Success",
     description: "From beginner to advanced powerlifting"
   },
   {
     videoUrl: video10,
-    thumbnail: user,
     name: "Idha",
     title: "Strength Training Success",
     description: "From beginner to advanced powerlifting"
   },
   {
-    videoUrl: video11,
-    thumbnail: user,
-    name: "Neha Singh",
+    videoUrl: video12,
+    name: "Aman",
     title: "Strength Training Success",
     description: "From beginner to advanced powerlifting"
   },
   {
-    videoUrl: video12,
-    thumbnail: user,
-    name: "Aman",
+    videoUrl: video13,
+    name: "Sagun",
     title: "Strength Training Success",
     description: "From beginner to advanced powerlifting"
   }
-
 ];
 
 function VideoGrid() {
@@ -229,12 +202,11 @@ function VideoGrid() {
           {visibleVideos.map((video, index) => (
             <div 
               key={isMobile ? currentSlide : currentSlide + index} 
-              className="relative h-[480px] sm:h-[300px] lg:h-[400px] bg-gray-900 rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 group"
+              className="relative h-[480px] sm:h-[300px] lg:h-[400px] bg-gray-900 rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300"
             >
               <video
                 className="w-full h-full object-cover"
                 src={video.videoUrl}
-                poster={video.thumbnail}
                 controls
                 playsInline
                 onPlay={(e) => handleVideoPlay(e, isMobile ? currentSlide : currentSlide + index)}
@@ -253,21 +225,6 @@ function VideoGrid() {
                 <p className="text-gray-300 text-xs sm:text-sm">
                   {video.description}
                 </p>
-              </div>
-
-              {/* Play Button Overlay */}
-              <div className={`absolute inset-0 flex items-center justify-center z-30 pointer-events-none transition-opacity
-                ${currentlyPlaying === (isMobile ? currentSlide : currentSlide + index) ? 'opacity-0' : 'group-hover:opacity-0'}`}
-              >
-                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-primary/80 rounded-full flex items-center justify-center">
-                  <svg 
-                    className="w-6 h-6 sm:w-8 sm:h-8 text-white" 
-                    fill="currentColor" 
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M8 5v14l11-7z"/>
-                  </svg>
-                </div>
               </div>
             </div>
           ))}

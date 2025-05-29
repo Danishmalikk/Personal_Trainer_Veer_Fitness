@@ -23,29 +23,29 @@ const programs = [
     isIcon: true,
     icon: <FaDumbbell  className="w-[70px] h-[30px]  text-xxl text-white transform rotate-45"  />,
   },
-  {
-    title: "Advanced Muscle Course",
-    description: "Browse through Digital Marketing or Corporate templates.",
-    alt: "Fourth One",
-    isIcon: true,
-    icon: <FaDumbbell  className="w-[70px] h-[30px]  text-xxl text-white transform rotate-45"  />,
+  // {
+  //   title: "Advanced Muscle Course",
+  //   description: "Browse through Digital Marketing or Corporate templates.",
+  //   alt: "Fourth One",
+  //   isIcon: true,
+  //   icon: <FaDumbbell  className="w-[70px] h-[30px]  text-xxl text-white transform rotate-45"  />,
     
-  },
-  {
-    title: "Yoga Training",
-    description: "This template is built on Bootstrap v4.3.1 framework. It is easy to adapt the columns and sections.",
-    alt: "Fifth One",
-    isIcon: true,
-    icon: <FaDumbbell  className="w-[70px] h-[30px]  text-xxl text-white transform rotate-45"  />,
+  // },
+  // {
+  //   title: "Yoga Training",
+  //   description: "This template is built on Bootstrap v4.3.1 framework. It is easy to adapt the columns and sections.",
+  //   alt: "Fifth One",
+  //   isIcon: true,
+  //   icon: <FaDumbbell  className="w-[70px] h-[30px]  text-xxl text-white transform rotate-45"  />,
    
-  },
-  {
-    title: "Body Building Course",
-    description: "Suspendisse fringilla et nisi et mattis. Curabitur sed finibus nisi.",
-    alt: "Sixth One",
-    isIcon: true,
-    icon: <FaDumbbell  className="w-[70px] h-[30px]  text-xxl text-white transform rotate-45"  />,
-  },
+  // },
+  // {
+  //   title: "Body Building Course",
+  //   description: "Suspendisse fringilla et nisi et mattis. Curabitur sed finibus nisi.",
+  //   alt: "Sixth One",
+  //   isIcon: true,
+  //   icon: <FaDumbbell  className="w-[70px] h-[30px]  text-xxl text-white transform rotate-45"  />,
+  // },
 ];
 
 const Programmes = () => {
