@@ -61,7 +61,7 @@ const Contact = () => {
         </p>
       </div>
       <p class="pt-2 text-left font-body font-bold text-primary lg:text-lg">
-        (+881) 111 222 333
+        (+91) 88688379**
       </p>
     </div>
     <div
@@ -74,7 +74,7 @@ const Contact = () => {
         </p>
       </div>
       <p class="pt-2 text-left font-body font-bold text-primary lg:text-lg">
-        name@mydomain.com
+      veerfitness95@gmail.com
       </p>
     </div>
     <div
@@ -87,7 +87,7 @@ const Contact = () => {
         </p>
       </div>
       <p class="pt-2 text-left font-body font-bold text-primary lg:text-lg">
-        123 New York D Block 1100, 2011 USA
+        9D Chandigarh Punjab
       </p>
     </div>
   </div>
