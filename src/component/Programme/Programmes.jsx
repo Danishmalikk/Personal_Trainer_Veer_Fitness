@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaDumbbell } from "react-icons/fa6";
+import { useNavigate } from 'react-router-dom';
 
 const programs = [
   {
@@ -7,21 +8,57 @@ const programs = [
     description: "Please do not re-distribute this template ZIP file on any template collection website. This is not allowed.",
     alt: "First One",
     isIcon: true,
-    icon: <FaDumbbell className="w-[50px] h-[25px] md:w-[70px] md:h-[30px] text-xxl text-white transform rotate-45" />,
+    iconType: "dumbbell",
+    features: [
+      "Personalized training plan",
+      "Expert guidance",
+      "Progress tracking",
+      "Nutrition support"
+    ],
+    learnings: [
+      "Proper form and technique",
+      "Workout planning",
+      "Goal setting",
+      "Lifestyle management"
+    ]
   },
   {
     title: "New Gym Training",
     description: "If you wish to support TemplateMo website via PayPal, please feel free to contact us. We appreciate it a lot.",
-    icon: <FaDumbbell  className="w-[70px] h-[30px]  text-xxl text-white transform rotate-45"  />,
+    iconType: "dumbbell",
     alt: "Second One",
     isIcon: true,
+    features: [
+      "Personalized training plan",
+      "Expert guidance",
+      "Progress tracking",
+      "Nutrition support"
+    ],
+    learnings: [
+      "Proper form and technique",
+      "Workout planning",
+      "Goal setting",
+      "Lifestyle management"
+    ]
   },
   {
     title: "Basic Muscle Course",
     description: "Credit goes to Pexels for images and video background used in this HTML template.",
     alt: "Third One",
     isIcon: true,
-    icon: <FaDumbbell  className="w-[70px] h-[30px]  text-xxl text-white transform rotate-45"  />,
+    iconType: "dumbbell",
+    features: [
+      "Personalized training plan",
+      "Expert guidance",
+      "Progress tracking",
+      "Nutrition support"
+    ],
+    learnings: [
+      "Proper form and technique",
+      "Workout planning",
+      "Goal setting",
+      "Lifestyle management"
+    ]
   },
   // {
   //   title: "Advanced Muscle Course",
@@ -49,6 +86,26 @@ const programs = [
 ];
 
 const Programmes = () => {
+  const navigate = useNavigate();
+
+  const handleDetails = (index) => {
+    console.log('Passing program data:', programs[index]); // Debug log
+    navigate(`/ProgramDetails/${index}`, {
+      state: {
+        program: programs[index]
+      }
+    });
+  };
+
+  const renderIcon = (iconType) => {
+    switch (iconType) {
+      case 'dumbbell':
+        return <FaDumbbell className="w-[50px] h-[25px] md:w-[70px] md:h-[30px] text-xxl text-white transform rotate-45" />;
+      default:
+        return null;
+    }
+  };
+
   return (
     <div className="bg-gray-50">
       <div className="container mx-auto px-4 sm:px-6 py-8 md:py-12">
@@ -58,7 +115,7 @@ const Programmes = () => {
             Choose Program
           </h2>
           <p className="text-gray-600 mt-3 md:mt-4 text-sm md:text-base px-4">
-          Transform your body and mind with our specialized fitness programs. 
+            Transform your body and mind with our specialized fitness programs. 
             Whether you're just starting out or looking to push your limits, 
             our expert trainers will guide you every step of the way.
           </p>
@@ -77,7 +134,7 @@ const Programmes = () => {
               {program.isIcon ? (
                 <div className="w-16 h-16 md:w-20 md:h-20 bg-primary flex justify-center 
                   items-center p-4 rounded-lg shrink-0">
-                  {program.icon}
+                  {renderIcon(program.iconType)}
                 </div>
               ) : (
                 <img 
@@ -95,13 +152,13 @@ const Programmes = () => {
                 <p className="text-gray-600 text-sm md:text-base mb-3">
                   {program.description}
                 </p>
-                <a 
-                  href="#" 
+                <button 
+                  // onClick={() => handleDetails(index)}
                   className="inline-block text-blue-600 font-medium text-sm md:text-base 
                     hover:text-blue-700 transition-colors"
                 >
                   Discover More
-                </a>
+                </button>
               </div>
             </div>
           ))}
