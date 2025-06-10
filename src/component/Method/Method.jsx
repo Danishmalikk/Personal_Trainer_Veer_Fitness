@@ -4,7 +4,7 @@ import about from '../../static/photo_6206100629324154358_y.jpg'
 const Method = () => {
   return (
     <div>
-      <section className="py-16 bg-gray-100">
+      <section className="py-4 bg-gray-100">
      <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
     
     {/* Left Content */}

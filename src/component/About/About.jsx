@@ -26,7 +26,7 @@ const About = () => {
   }, [dynamicWidth]);
 
   return (
-    <div ref={aboutRef}>
+    <div ref={aboutRef} className='px-14'>
       <div className="bg-grey-50" id="about">
         <Method/>
         <div className="container flex flex-col p-3 md:p-0 items-center py-10 md:py-20 lg:flex-row max-w-[1190px] mx-auto">

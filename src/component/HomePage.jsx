@@ -23,7 +23,7 @@ const HomePage = () => {
         <button ref={el => textRefs.current[4] = el} className='md:ml-2 mt-8 font-semibold px-4 p-2 rounded-full text-white border-2 border-primary hover:bg-secondary hover:text-white'> START HERE </button>
       </div>
       <div className='md:mt-0 mt-4'>
-        <img ref={imageRef} width={550} height={550} src={profileImage} alt=''/>
+        {/* <img ref={imageRef} width={550} height={550} src={profileImage} alt=''/> */}
       </div>
     </div>
   );
