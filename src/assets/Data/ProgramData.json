@@ -1,0 +1,45 @@
+[
+    {
+      "title": "Basic Fitness",
+      "description": "A beginner-friendly fitness program focusing on overall health, stamina, and body balance. Perfect for those new to the gym or returning after a break.",
+      "duration": "4 weeks",
+      "level": "Beginner",
+      "features": [
+        "Full body workouts",
+        "Cardio sessions",
+        "Stretching and flexibility",
+        "Nutritional guidance"
+      ],
+      "cta": "Join Now",
+      "imageUrl": "https://example.com/images/basic-fitness.jpg"
+    },
+    {
+      "title": "New Gym Training",
+      "description": "An intensive gym program designed to introduce you to modern equipment and form-focused strength training. Stay safe and grow stronger!",
+      "duration": "6 weeks",
+      "level": "Intermediate",
+      "features": [
+        "Weightlifting basics",
+        "Machine tutorials",
+        "Form correction",
+        "Personal trainer support"
+      ],
+      "cta": "Discover More",
+      "imageUrl": "https://example.com/images/new-gym-training.jpg"
+    },
+    {
+      "title": "Basic Muscle Course",
+      "description": "Target your major muscle groups with this structured course. Includes resistance training and muscle recovery techniques.",
+      "duration": "8 weeks",
+      "level": "Intermediate",
+      "features": [
+        "Push-pull training split",
+        "Rest & recovery days",
+        "Hypertrophy-focused sets",
+        "Video workout guidance"
+      ],
+      "cta": "Start Training",
+      "imageUrl": "https://example.com/images/muscle-course.jpg"
+    }
+  ]
+  
