@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 import user from '../../assets/images/user.jpg';
 // Import your video files
 import video1 from '../../assets/video/IMG_0174.MP4';
@@ -18,38 +19,44 @@ const testimonials = [
   {
     image: user,
     quote: "Training with Veer has been life-changing! His personalized approach and constant motivation helped me lose 15kg in 4 months. His expertise in nutrition and workout planning is exceptional!",
-    name: "Rahul Sharma",
-    memberSince: "Client since 2021"
+    name: "Ishu ",
+    memberSince: "Client since 2021",
+    loction: "Canada"
   },
   {
     image: user,
     quote: "As a busy professional, I needed a flexible training program. Veer's online coaching and detailed workout plans made it possible to achieve my fitness goals while managing my schedule.",
-    name: "Priya Patel",
-    memberSince: "Client since 2019"
+    name: "Ajay Singh",
+    memberSince: "Client since 2019",
+    loction: "Chandigarh"
   },
   {
     image: user,
     quote: "Veer's dedication to his clients is unmatched. His scientific approach to muscle building helped me gain 10kg of lean muscle in 6 months. The results speak for themselves!",
-    name: "Amit Kumar",
-    memberSince: "Client since 2020"
+    name: "Savita Arora",
+    memberSince: "Client since 2020",
+    loction: "Delhi",
   },
   {
     image: user,
     quote: "I've tried many trainers before, but Veer's knowledge and attention to form correction sets him apart. My strength has improved significantly, and I'm finally seeing the results I wanted.",
-    name: "Neha Singh",
-    memberSince: "Client since 2022"
+    name: "Saloni Arora",
+    memberSince: "Client since 2022",
+    loction: "Mohali"
   },
   {
     image: user,
     quote: "The transformation journey with Veer has been amazing. His diet plans are practical and sustainable. I've not just lost weight but learned how to maintain a healthy lifestyle.",
-    name: "Rajesh Verma",
-    memberSince: "Client since 2021"
+    name: "Vanshika",
+    memberSince: "Client since 2021",
+     loction: "Jammu"
   },
   {
     image: user,
     quote: "From a beginner to now competing in bodybuilding, Veer's guidance has been instrumental. His expertise in contest prep and posing is outstanding!",
-    name: "Deepak Sharma",
-    memberSince: "Client since 2020"
+    name: "Dr Oman Singh",
+    memberSince: "Client since 2020",
+    loction: "chandigarh"
   }
 ];
 
@@ -267,13 +274,38 @@ function VideoGrid() {
 }
 
 function Testimonials() {
+  const navigate = useNavigate();
+  const [currentlyPlaying, setCurrentlyPlaying] = useState(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  const handleDiscoverMore = () => {
+    navigate('/program-details', {
+      state: {
+        videoTestimonials,
+        testimonials
+      }
+    });
+  };
+
   return (
     <div className="bg-gray-50 py-20">
       <div className="container mx-auto">
-        <h2 className="text-center font-header md:text-5xl text-2xl  font-bold text-primary mb-16 relative">
-          Client Transformations
-          <div className="absolute w-32 h-1 bg-primary left-1/2 -translate-x-1/2 bottom--6"></div>
-        </h2>
+        <div className="flex justify-center items-center mb-16">
+          <h2 className="text-center font-header md:text-5xl text-2xl font-bold text-primary relative">
+            Client Transformations
+            <div className="absolute w-32 h-1 bg-primary left-1/2 -translate-x-1/2 bottom--6"></div>
+          </h2>
+          {/* <button
+            onClick={handleDiscoverMore}
+            className="text-primary hover:text-primary/80 font-semibold flex items-center"
+          >
+            Discover More
+            <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </button> */}
+        </div>
 
         {/* Video Grid */}
         <VideoGrid />
@@ -302,6 +334,7 @@ function Testimonials() {
               </blockquote>
               <div className="text-center">
                 <p className="text-xl font-bold text-gray-900 mb-1">{testimonial.name}</p>
+                <p className="text-gray-600 text-sm mb-2">{`(${testimonial.loction})`}</p>
                 <p className="text-primary font-medium">{testimonial.memberSince}</p>
               </div>
             </div>
