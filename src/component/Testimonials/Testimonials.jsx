@@ -12,6 +12,8 @@ import video9 from '../../assets/video/IMG_2772.MP4';
 import video10 from '../../assets/video/IMG_2817.MP4';
 import video12 from '../../assets/video/IMG_8192.MOV';
 import video13 from '../../assets/video/sagun.mp4';
+import PhotosTransformation from './PhotosTransformation';
+
 const testimonials = [
   {
     image: user,
@@ -213,7 +215,7 @@ function VideoGrid() {
               />
 
               {/* Video Info Overlay */}
-              <div className={`absolute bottom-0 left-0 right-0 p-3 sm:p-4 text-white z-20 bg-gradient-to-t from-black/80 to-transparent transform transition-transform duration-300 
+              <div className={`absolute bottom-0 left-0 right-0 p-3 sm:p-4 text-black z-20 bg-gradient-to-t from-black/80 to-transparent transform transition-transform duration-300 
                 ${currentlyPlaying === (isMobile ? currentSlide : currentSlide + index) ? 'translate-y-full' : 'translate-y-full group-hover:translate-y-0'}`}
               >
                 <h4 className="font-bold text-base sm:text-lg mb-0.5 sm:mb-1">
@@ -305,6 +307,13 @@ function Testimonials() {
             </div>
           ))}
         </div>
+
+        {/* Photo Transformations */}
+        <h2 className="text-center font-header md:text-5xl text-2xl  font-bold text-primary mb-16 mt-16 relative">
+          Transformations Photo Gallery 
+          <div className="absolute w-32 h-1 bg-primary left-1/2 -translate-x-1/2 bottom--6"></div>
+        </h2>
+        <PhotosTransformation/>
       </div>
     </div>
   );

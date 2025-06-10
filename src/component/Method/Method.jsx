@@ -5,7 +5,7 @@ const Method = () => {
   return (
     <div>
       <section className="py-16 bg-gray-100">
-  <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+     <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
     
     {/* Left Content */}
     <div className="md:w-1/2 space-y-6">
@@ -33,13 +33,13 @@ const Method = () => {
     {/* Right Image */}
     <div className="md:w-1/2">
       <img src={about} alt="About Me" className="w-full rounded-lg shadow-lg transform hover:scale-105 transition duration-300" />
-    </div>
+        </div>
 
-  </div>
-</section>
+        </div>
+      </section>
 
     </div>
   )
 }
 
-export default Method
+export default Method; 
