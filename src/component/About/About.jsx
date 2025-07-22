@@ -35,11 +35,23 @@ const About = () => {
               Who am I?
             </h2>
             <h4 className="pt-6 font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl">
-              I'm Veer, a Certified Gym Trainer & Fitness Coach
+            Hi! I'm Lucky, a certified fitness trainer with over 8 years of experience helping people achieve their health and fitness goals.
             </h4>
             <p className="pt-6 font-body leading-relaxed text-grey-20">
-              Passionate about helping people achieve their fitness goals, I specialize in strength training, weight loss, and muscle building. With years of experience in the fitness industry, I create personalized workout and nutrition plans tailored to your needs. Whether you're a beginner or an athlete, I'm here to guide you toward a healthier and stronger version of yourself. Let’s train smart and push limits together!
-              Let me know if you'd like any modifications! 💪🔥
+            Based in Mohali, Chandigarh, I specialize in bodybuilding, weight loss, and fat loss. Throughout my career, 
+            I've had the privilege of working with clients of all fitness levels, from beginners to advanced athletes, 
+            guiding them through customized fitness plans that deliver lasting results.
+
+            My passion for fitness began years ago and has only grown stronger with time. 
+            My approach is rooted in science, combining effective training techniques with the latest in 
+            nutrition and recovery practices. Whether you're looking to build muscle, shed those extra pounds, 
+            or improve your overall health, I’m here to help you every step of the way.
+
+            As a trainer, my goal is not just to help you transform your body, but to inspire and empower you to 
+            live a healthier and more confident life. I'm committed to offering personalized attention, ongoing 
+            support, and the motivation you need to achieve your fitness goals.
+
+
             </p>
             <div className="flex flex-col justify-center pt-6 sm:flex-row lg:justify-start">
               <div className="flex items-center justify-center sm:justify-start">
