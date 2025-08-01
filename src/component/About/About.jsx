@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
+import Method from '../Method/Method'
 gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
@@ -26,11 +26,11 @@ const About = () => {
   }, [dynamicWidth]);
 
   return (
-    <div ref={aboutRef}>
+    <div ref={aboutRef} className='px-14'>
       <div className="bg-grey-50" id="about">
+        <Method/>
         <div className="container flex flex-col p-3 md:p-0 items-center py-10 md:py-20 lg:flex-row max-w-[1190px] mx-auto">
           <div className="w-full text-center sm:w-3/4 lg:w-3/5 lg:text-left">
-
             <h2 className="font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl">
               Who am I?
             </h2>

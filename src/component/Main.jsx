@@ -8,6 +8,7 @@ import Services from "./Services/Services";
 import Traning from "./Traning/Traning";
 import Blog from "./Blog/Blog";
 import BlogPost from "./Blog/BlogPost";
+
 const Main = () => {
   return (
     <div className="custome-container bg-black">
@@ -16,8 +17,8 @@ const Main = () => {
          <Services />
          <Traning />
          <Stripe/>
-         <SecondComponent/>
-         <Third/>
+         {/* <SecondComponent/> */}
+         {/* <Third/> */}
     </div>
   );
 };

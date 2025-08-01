@@ -234,6 +234,12 @@ const Contact = () => {
   </div>
 </div>
         </div>
+        <textarea name="medicalHistory" onChange={handleChange} value={formData.medicalHistory} className="mt-6 w-full rounded border border-black px-4 py-3 text-black" placeholder="Medical History" rows="4" />
+        <textarea name="goal" onChange={handleChange} value={formData.goal} className="mt-6 w-full rounded border border-black px-4 py-3 text-black" placeholder="Your Transformation Goal" rows="4" required />
+        <button type="submit" className="mt-6 flex items-center justify-center rounded bg-primary px-8 py-3 font-bold uppercase text-white hover:bg-gray-800">
+          Send
+        </button>
+      </form>
     </div>
   )
 }

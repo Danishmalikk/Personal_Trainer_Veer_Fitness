@@ -9,7 +9,6 @@ import Header from './component/Header';
 import Footer from './component/Footer';
 import Contact from './component/Contact/Contact';
 import Programmes from './component/Programme/Programmes';
-import Method from './component/Method/Method'; 
 import About from './component/About/About';
 import { OurPractice } from './component/OurPractice/OurPractice';
 import Blog from './component/Blog/Blog';

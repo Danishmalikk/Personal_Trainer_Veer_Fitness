@@ -37,7 +37,7 @@ const Header = () => {
   ];
 
   return (
-    <div className='sticky top-0 bg-white z-50 shadow-md'>
+    <div className='sticky top-0 bg-white z-50 shadow-md px-14'>
       <div className='container mx-auto px-4'>
         <div className='flex justify-between items-center h-20'>
           <Link to={'/'} className='h-15 w-[200px] relative md:z-50'>
