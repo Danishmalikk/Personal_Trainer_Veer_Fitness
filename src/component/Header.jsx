@@ -26,8 +26,9 @@ const Header = () => {
   };
 
   const menuItems = [
-    { path: '/quiz', label: 'Quiz' },
+    // { path: '/quiz', label: 'Quiz' },
     { path: '/programmes', label: 'Programmes' },
+    // { path: '/method', label: 'Method' },
     { path: '/about', label: 'About' },
     { path: '/ourpractice', label: 'Our Practice' },
     { path: '/blog', label: 'Blog' },

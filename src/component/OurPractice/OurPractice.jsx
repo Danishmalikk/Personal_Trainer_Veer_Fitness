@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export const OurPractice = () => {
   return (
@@ -43,7 +44,7 @@ export const OurPractice = () => {
       </div>
   
       <div class="mt-12 text-center">
-        <a href="#contact" class="inline-block px-8 py-4 text-lg font-semibold text-white bg-primary rounded-lg hover:bg-primary-dark transition duration-300 transform hover:scale-105">Join Us Now</a>
+        <Link to={'/contact'} class="inline-block px-8 py-4 text-lg font-semibold text-white bg-primary rounded-lg hover:bg-primary-dark transition duration-300 transform hover:scale-105">Join Us Now </Link>
       </div>
     </div>
   </div>
