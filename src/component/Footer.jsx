@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Logo from '../static/logo_1.png'
-import { Input } from '@mui/material'
 import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa'
 
 const Footer = () => {

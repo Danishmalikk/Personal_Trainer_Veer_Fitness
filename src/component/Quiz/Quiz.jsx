@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import StepperProgress from './StepperProgress'
-import BasicCard from './BasicCard'
 
 const quizQuestions = [
   {

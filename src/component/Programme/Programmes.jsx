@@ -1,6 +1,5 @@
 import React from 'react';
 import { FaDumbbell } from "react-icons/fa6";
-import { useNavigate } from 'react-router-dom';
 
 const programs = [
   {
@@ -86,17 +85,6 @@ const programs = [
 ];
 
 const Programmes = () => {
-  const navigate = useNavigate();
-
-  const handleDetails = (index) => {
-    console.log('Passing program data:', programs[index]); // Debug log
-    navigate(`/ProgramDetails/${index}`, {
-      state: {
-        program: programs[index]
-      }
-    });
-  };
-
   const renderIcon = (iconType) => {
     switch (iconType) {
       case 'dumbbell':

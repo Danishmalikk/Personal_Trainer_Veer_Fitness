@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
-import profileImage from '../static/photo_6206100629324154358_y.jpg';
 
 const HomePage = () => {
   const textRefs = useRef([]);

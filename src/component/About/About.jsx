@@ -55,7 +55,7 @@ const About = () => {
             </p>
             <div className="flex flex-col justify-center pt-6 sm:flex-row lg:justify-start">
               <div className="flex items-center justify-center sm:justify-start">
-                <a href="https://wa.me/8770238852" target="_blank" className="font-body text-lg font-semibold uppercase text-grey-20">
+                <a href="https://wa.me/8770238852" target="_blank" rel="noreferrer" className="font-body text-lg font-semibold uppercase text-grey-20">
                   Connect with me
                 </a>
                 <div className="hidden sm:block">

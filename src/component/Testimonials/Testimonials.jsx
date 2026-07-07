@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
 import user from '../../assets/images/user.jpg';
 // Import your video files
 import video1 from '../../assets/video/IMG_0174.MP4';
@@ -274,20 +273,6 @@ function VideoGrid() {
 }
 
 function Testimonials() {
-  const navigate = useNavigate();
-  const [currentlyPlaying, setCurrentlyPlaying] = useState(null);
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isMobile, setIsMobile] = useState(false);
-
-  const handleDiscoverMore = () => {
-    navigate('/program-details', {
-      state: {
-        videoTestimonials,
-        testimonials
-      }
-    });
-  };
-
   return (
     <div className="bg-gray-50 py-20">
       <div className="container mx-auto">

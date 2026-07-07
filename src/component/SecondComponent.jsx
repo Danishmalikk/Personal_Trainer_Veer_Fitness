@@ -99,7 +99,7 @@ const SecondComponent = () => {
   return (
     <div className="flex gap-2 flex-col md:flex-row" ref={containerRef}>
       <div>
-        <img ref={imageRef} src={SecondComponentImage} width={740} height={200} />
+        <img ref={imageRef} src={SecondComponentImage} width={740} height={200} alt="" />
       </div>
       <div className="flex flex-col gap-6 text-xl md:mt-72 mt-4 md:ml-20 p-3 md:p-0">
         <h1 ref={el => textRefs.current[0] = el} className="text-white">
