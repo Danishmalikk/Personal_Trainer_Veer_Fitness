@@ -6,7 +6,9 @@ const Contact = () => {
     email: '',
     phone: '',
     whatsapp: '',
-    message: ''
+    message: '',
+    medicalHistory: '',
+    goal: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState('');
@@ -62,7 +64,7 @@ const Contact = () => {
 
       if (data.success) {
         setSubmitMessage('Message sent successfully! We will get back to you soon.');
-        setFormData({ name: '', email: '', phone: '', whatsapp: '', message: '' });
+        setFormData({ name: '', email: '', phone: '', whatsapp: '', message: '', medicalHistory: '', goal: '' });
         setUseSameAsPhone(false);
       } else {
         setSubmitMessage(data.message || 'Failed to send message. Please try again.');
@@ -78,7 +80,7 @@ const Contact = () => {
   return (
     <div>
         <div> 
-        <div class="container p-3 py-16 md:py-20 mx-auto" id="contact">
+        <div className="container p-3 py-16 md:py-20 mx-auto" id="contact">
   <div className="text-center max-w-2xl mx-auto mb-8">
     <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
       Get in Touch
@@ -191,49 +193,50 @@ const Contact = () => {
   </button>
 </form>
 
-  <div class="flex flex-col pt-16 lg:flex-row">
+  <div className="flex flex-col pt-16 lg:flex-row">
     <div
-      class="w-full border-l-2 border-t-2 border-r-2 border-b-2 border-grey-70 px-6 py-6 sm:py-8 lg:w-1/3"
+      className="w-full border-l-2 border-t-2 border-r-2 border-b-2 border-grey-70 px-6 py-6 sm:py-8 lg:w-1/3"
     >
-      <div class="flex items-center">
-        <i class="bx bx-phone text-2xl text-grey-40"></i>
-        <p class="pl-2 font-body font-bold uppercase text-grey-40 lg:text-lg">
+      <div className="flex items-center">
+        <i className="bx bx-phone text-2xl text-grey-40"></i>
+        <p className="pl-2 font-body font-bold uppercase text-grey-40 lg:text-lg">
           My Phone
         </p>
       </div>
-      <p class="pt-2 text-left font-body font-bold text-primary lg:text-lg">
+      <p className="pt-2 text-left font-body font-bold text-primary lg:text-lg">
         (+91) 88688379**
       </p>
     </div>
     <div
-      class="w-full border-l-2 border-t-0 border-r-2 border-b-2 border-grey-70 px-6 py-6 sm:py-8 lg:w-1/3 lg:border-l-0 lg:border-t-2"
+      className="w-full border-l-2 border-t-0 border-r-2 border-b-2 border-grey-70 px-6 py-6 sm:py-8 lg:w-1/3 lg:border-l-0 lg:border-t-2"
     >
-      <div class="flex items-center">
-        <i class="bx bx-envelope text-2xl text-grey-40"></i>
-        <p class="pl-2 font-body font-bold uppercase text-grey-40 lg:text-lg">
+      <div className="flex items-center">
+        <i className="bx bx-envelope text-2xl text-grey-40"></i>
+        <p className="pl-2 font-body font-bold uppercase text-grey-40 lg:text-lg">
           My Email
         </p>
       </div>
-      <p class="pt-2 text-left font-body font-bold text-primary lg:text-lg">
+      <p className="pt-2 text-left font-body font-bold text-primary lg:text-lg">
       veerfitness95@gmail.com
       </p>
     </div>
     <div
-      class="w-full border-l-2 border-t-0 border-r-2 border-b-2 border-grey-70 px-6 py-6 sm:py-8 lg:w-1/3 lg:border-l-0 lg:border-t-2"
+      className="w-full border-l-2 border-t-0 border-r-2 border-b-2 border-grey-70 px-6 py-6 sm:py-8 lg:w-1/3 lg:border-l-0 lg:border-t-2"
     >
-      <div class="flex items-center">
-        <i class="bx bx-map text-2xl text-grey-40"></i>
-        <p class="pl-2 font-body font-bold uppercase text-grey-40 lg:text-lg">
+      <div className="flex items-center">
+        <i className="bx bx-map text-2xl text-grey-40"></i>
+        <p className="pl-2 font-body font-bold uppercase text-grey-40 lg:text-lg">
           My Address
         </p>
       </div>
-      <p class="pt-2 text-left font-body font-bold text-primary lg:text-lg">
+      <p className="pt-2 text-left font-body font-bold text-primary lg:text-lg">
         9D Chandigarh Punjab
       </p>
     </div>
   </div>
 </div>
-        </div>
+    </div>
+        <form>
         <textarea name="medicalHistory" onChange={handleChange} value={formData.medicalHistory} className="mt-6 w-full rounded border border-black px-4 py-3 text-black" placeholder="Medical History" rows="4" />
         <textarea name="goal" onChange={handleChange} value={formData.goal} className="mt-6 w-full rounded border border-black px-4 py-3 text-black" placeholder="Your Transformation Goal" rows="4" required />
         <button type="submit" className="mt-6 flex items-center justify-center rounded bg-primary px-8 py-3 font-bold uppercase text-white hover:bg-gray-800">
